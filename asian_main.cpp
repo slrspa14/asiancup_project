@@ -21,10 +21,6 @@ int main()
 
 
 
-
-
-
-
     for (int i = 0; i < map_size; i++)
     {
         for (int j = 0; i < map_size; j++)

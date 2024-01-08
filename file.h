@@ -1,24 +1,28 @@
 #include <iostream>
 #include <fstream> // 파일 입출력을 위해
 #include <string>
+#include <unistd.h>
+using namespace std;
 
-int main()
+class art
 {
-    using namespace std;
-    string line;
-    ofstream file("data.txt");
-    if(file.is_open())
+    public:
+    void asiiart()
     {
-        file << "사용자가 입력하는 성명: ";
-        file << "사용자가 입력하는 핸드폰 번호: ";
-        file << "사용자가 입력하는 ID: ";
-        file << "사용자가 입력하는 비밀번호: ";
-        file.close(); // 열었으면 닫아야지
+        string line;
+        ifstream file("/home/aiot11/cfold/c++/asian/asiancup_ASCIIART.txt");
+        if (file.is_open()) // 성공하면 열기
+        {  
+            while (getline(file,line)) // 파일 한줄씩 읽기
+            {
+                cout << line << endl; //한줄씩 출력하기
+            }
+            sleep(2);
+            file.close(); // 열었으면 닫아야지
+        }
+        else
+        {
+            cout << "error" << endl;
+        }
     }
-    else
-    {
-        cout << "시발에러" << endl;
-        return 1;
-    }
-    return 0;
-}
+};

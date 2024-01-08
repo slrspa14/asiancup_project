@@ -1,14 +1,16 @@
 #include <iostream>
-#include <unistd.h>
-#include "file.h"
-// #include "console.h"
+#include "asiancup_art.h"
+#include "menu.h"
 // #include "select.h"
-using namespace std;
-const int map_size = 20;
 
 int main()
 {   
     art start;
-    start.asiiart();
+    console dis;
+    start.start_asciiart();
+    dis.display();
+    dis.login_display();
+    dis.forget_display();
+    dis.join_display();
     return 0;
 }

@@ -7,7 +7,7 @@ using namespace std;
 class art
 {
     public:
-    void asiiart()
+    void start_asciiart()
     {
         string line;
         ifstream file("/home/aiot11/cfold/c++/asian/asiancup_ASCIIART.txt");
@@ -18,7 +18,27 @@ class art
                 cout << line << endl; //한줄씩 출력하기
             }
             sleep(2);
+            system("clear");
             file.close(); // 열었으면 닫아야지
+        }
+        else
+        {
+            cout << "error" << endl;
+        }
+    }
+    void korea_asciiart()
+    {
+        string line;
+        ifstream file("/home/aiot11/cfold/c++/asian/KFA_ASCIIART.txt");
+        if(file.is_open())
+        {
+            while(getline(file,line))
+            {
+                cout << line << endl;
+            }
+            sleep(2);
+            system("clear");
+            file.close();
         }
         else
         {

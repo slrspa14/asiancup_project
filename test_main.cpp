@@ -54,6 +54,7 @@ void menu_display()
 }
 void display()
 {
+    int count=0;
     int choice=0;
     while (choice<6) 
     {
@@ -88,6 +89,7 @@ void display()
             ofstream file("join.csv",ios::app);
             if(file.is_open())
             {
+                count++; // 중복검사용 카운트
                 cout << "회원가입" << endl;
                 cout << "성명: ___\b\b\b";
                 char name[15];
@@ -97,6 +99,25 @@ void display()
                 char user_id[15];
                 cin >> user_id;
                 file << user_id << ",";
+                string line;
+                ifstream file("join.csv");
+                if(file.is_open())
+                {
+                    while(getline(file,line)) // 한줄씩 읽어온다.
+                        cout << line << endl;
+                    // for (int i = 1; i < 2; i++)
+                    // {
+                    //     for (int j = 0; j < count; j++)
+                    //     {
+                    //         cout << line << endl;
+                    //         // if (name == )
+                    //         // {
+                    //         //     cout << "중복된 ID입니다.";
+                    //         //     break;
+                    //         // }
+                    //     }
+                    // }
+                }
                 cout << "PW: _____\b\b\b\b\b";
                 char user_pw[15];
                 cin >> user_pw;
@@ -108,7 +129,7 @@ void display()
                 cout << "회원가입 완료" << endl;
                 cout << "고유회원번호: " << rand()%1000 << rand()%1000 << endl;
                 file << '\n';
-                // file.close();
+                file.close();
             }
             else
                 cout << "error" << endl;

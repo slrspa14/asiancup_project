@@ -1,14 +1,7 @@
 #include "choice.h"
-int while_vector1(string name);
-int while_vector2(string id);
-int while_vector3(string pw);
-int while_vector4(string pnum);
-vector<string> name_v;
-vector<string> id_v;
-vector<string> pw_v;
-vector<string> pnum_v;
+// #include <vector>
 
-void file_save()
+void join_data::file_save()
 {
     string line;
     ofstream file("join.csv",ios::app);
@@ -58,8 +51,6 @@ void file_save()
         cout << "PW: _____\b\b\b\b\b";
         string user_pw;
         cin >> user_pw;
-        // file << user_pw << ",";
-        // pw_v.push_back(user_pw);
         while(1)
         {
             if(while_vector3(user_pw) == 1)
@@ -78,8 +69,6 @@ void file_save()
         cout << "핸드폰번호(-제외) ___________\b\b\b\b\b\b\b\b\b\b\b";
         string user_pnum;
         cin >> user_pnum;
-        // file << user_pnum << ",";
-        // pnum_v.push_back(user_pnum);
         while(1)
         {
             if(while_vector4(user_pnum) == 1)
@@ -95,12 +84,12 @@ void file_save()
             }
         }
         cout << "회원가입 완료" << endl;
-        cout << "고유회원번호: " << rand()%10000 << endl; //회원번호 랜덤값
+        cout << "회원번호: " << rand()%10000 << endl; //회원번호 랜덤값
         file << '\n';
         file.close(); // 닫기
     }
 }
-int while_vector1(string name)
+int join_data::while_vector1(string name)
 {
     if(name_v.size() != 0)
     {
@@ -112,7 +101,7 @@ int while_vector1(string name)
     }
     return 0;
 }
-int while_vector2(string id)
+int join_data::while_vector2(string id)
 {
     if (id_v.size() !=0)
     {
@@ -124,7 +113,7 @@ int while_vector2(string id)
     }
     return 0;
 }
-int while_vector3(string pw)
+int join_data::while_vector3(string pw)
 {
     if (pw_v.size() !=0)
     {
@@ -136,7 +125,7 @@ int while_vector3(string pw)
     }
     return 0;
 }
-int while_vector4(string pnum)
+int join_data::while_vector4(string pnum)
 {
     if (pnum_v.size() !=0)
     {

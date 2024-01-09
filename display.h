@@ -6,6 +6,7 @@
 #include <string.h>
 #include <unistd.h>
 using namespace std;
+
 class display
 {
     public:
@@ -13,5 +14,6 @@ class display
     void korea_asciiart();
     void menu_display();
     void dis();
+    
 };
 #endif

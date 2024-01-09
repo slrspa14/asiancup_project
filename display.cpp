@@ -1,5 +1,8 @@
 #include "display.h"
 #include "choice.h"
+//join_data::file_save을 찾을 수 없어서 실패
+//링커가 이 심볼을 찾을 수 없는 것은 필요한 라이브러리나 오브젝트 파일을 알려주지 않았기 때문
+// 선언오류
 
 void display::dis()
 {
@@ -31,8 +34,11 @@ void display::dis()
             break;
         }
 
-        case 2:{//초기화 안되게
-            system("clear");            
+        case 2:
+        {   //초기화 안되게
+            system("clear");
+            join_data join;
+            join.file_save();
             break;
         }
         case 3:

@@ -5,6 +5,7 @@
 #include <string>
 #include <string.h>
 #include <unistd.h>
+
 using namespace std;
 
 class display
@@ -12,8 +13,8 @@ class display
     public:
     void start_asciiart();
     void korea_asciiart();
-    void menu_display();
     void dis();
+    void menu_display();
     
 };
 #endif

@@ -1,5 +1,6 @@
 #include "display.h"
 #include "choice.h"
+
 //join_data::file_save을 찾을 수 없어서 실패
 //링커가 이 심볼을 찾을 수 없는 것은 필요한 라이브러리나 오브젝트 파일을 알려주지 않았기 때문
 // 선언오류
@@ -7,10 +8,10 @@
 void display::dis()
 {
     int choice=0;
-    while (choice<6) 
+    while (choice<6)
     {
-        //menu_display();
-        std::cin >> choice;
+        menu_display();
+        cin >> choice;
         switch (choice)
         {
         case 1:{// 로그인할 때 저장된거랑 비교해서 맞으면 로그인 아니면 실패 후 종료
@@ -35,10 +36,11 @@ void display::dis()
         }
 
         case 2:
-        {   //초기화 안되게
+        {   
             system("clear");
             join_data join;
             join.file_save();
+
             break;
         }
         case 3:
@@ -51,9 +53,11 @@ void display::dis()
             // int user_pnum[15];
             // cin >> user_pnum;
             break;
+
         case 4:
             std::cout << "예매/예매확인" << std::endl;
             break;
+
         case 5:
         {
             system("clear");
@@ -76,8 +80,8 @@ void display::dis()
                 }
                 std::cout << "\n\n메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
                 std::cin >> choice;
-                // if(choice>0)
-                //     menu_display();
+                if(choice>0)
+                    menu_display();
                 file.close();
                 break;
             }
@@ -92,8 +96,8 @@ void display::dis()
                 }
                 std::cout << "\n\n메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
                 std::cin >> choice;
-                // if(choice>0)
-                //     menu_display();
+                if(choice>0)
+                    menu_display();
                 file.close();
                 break;
             }
@@ -107,12 +111,13 @@ void display::dis()
                 }
                 std::cout << "\n\n메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
                 std::cin >> choice;
-                // if(choice>0)
-                //     menu_display();
+                if(choice>0)
+                    menu_display();
                 file.close();
                 break;
             }
-            case 4:{
+            case 4:
+            {
                 std::string line;
                 std::ifstream file("korean.txt");
                 if(file.is_open())
@@ -122,11 +127,13 @@ void display::dis()
                 }
                 std::cout << "\n\n메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
                 std::cin >> choice;
-                // if(choice>0)
-                //     menu_display();
+                if(choice>0)
+                    menu_display();
                 file.close();
                 break;
             }
+            default:
+                break;
             }
         }
         }

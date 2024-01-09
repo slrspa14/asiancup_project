@@ -86,8 +86,10 @@ void join_data::file_save()
         cout << "회원가입 완료" << endl;
         cout << "회원번호: " << rand()%10000 << endl; //회원번호 랜덤값
         file << '\n';
+        sleep(1);
         file.close(); // 닫기
     }
+    system("clear");
 }
 int join_data::while_vector1(string name)
 {

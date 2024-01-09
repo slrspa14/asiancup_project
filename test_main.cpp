@@ -12,7 +12,9 @@ int main()
     display output;
     output.start_asciiart();
     output.korea_asciiart();
-    output.menu_display();
-    output.dis();
+    while(1)
+    {
+        output.dis();
+    }
     return 0;
 }

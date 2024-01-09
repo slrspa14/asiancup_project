@@ -1,19 +1,18 @@
 #include <iostream>
 #include <fstream>
 #include <string>
+#include <string.h>
 #include <unistd.h>
-
-using namespace std;
 
 void start_asciiart()
 {
-    string line;
-    ifstream file("/home/aiot11/cfold/c++/asian/asiancup_ASCIIART.txt");
+    std::string line;
+    std::ifstream file("/home/aiot11/cfold/c++/asian/asiancup_ASCIIART.txt");
     if (file.is_open()) // 성공하면 열기
     {  
         while (getline(file,line)) // 파일 한줄씩 읽기
         {
-            cout << line << endl; //한줄씩 출력하기
+            std::cout << line << std::endl; //한줄씩 출력하기
         }
         sleep(2);
         system("clear");
@@ -21,11 +20,12 @@ void start_asciiart()
     }
     else
     {
-        cout << "error" << endl;
+        std::cout << "error" << std::endl;
     }
 }
 void korea_asciiart()
     {
+        using namespace std;
         string line;
         ifstream file("/home/aiot11/cfold/c++/asian/KFA_ASCIIART.txt");
         if(file.is_open())
@@ -45,15 +45,16 @@ void korea_asciiart()
     }
 void menu_display()
 {
-    cout << "1. 로그인" << endl;
-    cout << "2. 회원가입" << endl;
-    cout << "3. ID/PW 찾기" << endl;
-    cout << "4. 예매/예매확인" << endl;
-    cout << "5. 아시안컵 정보" << endl;
-    cout << "6. 종료" << endl;
+    std::cout << "1. 로그인" << std::endl;
+    std::cout << "2. 회원가입" << std::endl;
+    std::cout << "3. ID/PW 찾기" << std::endl;
+    std::cout << "4. 예매/예매확인" << std::endl;
+    std::cout << "5. 아시안컵 정보" << std::endl;
+    std::cout << "6. 종료" << std::endl;
 }
 void display()
 {
+    using namespace std;
     int count=0;
     int choice=0;
     while (choice<6) 
@@ -99,25 +100,6 @@ void display()
                 char user_id[15];
                 cin >> user_id;
                 file << user_id << ",";
-                string line;
-                ifstream file("join.csv");
-                if(file.is_open())
-                {
-                    while(getline(file,line)) // 한줄씩 읽어온다.
-                        cout << line << endl;
-                    // for (int i = 1; i < 2; i++)
-                    // {
-                    //     for (int j = 0; j < count; j++)
-                    //     {
-                    //         cout << line << endl;
-                    //         // if (name == )
-                    //         // {
-                    //         //     cout << "중복된 ID입니다.";
-                    //         //     break;
-                    //         // }
-                    //     }
-                    // }
-                }
                 cout << "PW: _____\b\b\b\b\b";
                 char user_pw[15];
                 cin >> user_pw;
@@ -168,7 +150,7 @@ void display()
                     while(getline(file,line))
                         cout << line << endl;
                 }
-                cout << "메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
+                cout << "\n\n메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
                 cin >> choice;
                 if(choice>0)
                     menu_display();
@@ -184,7 +166,7 @@ void display()
                     while(getline(file,line))
                         cout << line << endl;
                 }
-                cout << "메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
+                cout << "\n\n메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
                 cin >> choice;
                 if(choice>0)
                     menu_display();
@@ -199,7 +181,7 @@ void display()
                     while(getline(file,line))
                         cout << line << endl;
                 }
-                cout << "메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
+                cout << "\n\n메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
                 cin >> choice;
                 if(choice>0)
                     menu_display();
@@ -214,7 +196,7 @@ void display()
                     while(getline(file,line))
                         cout << line << endl;
                 }
-                cout << "메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
+                cout << "\n\n메인페이지 이동을 원하시면 아무 숫자를 눌러주세요";
                 cin >> choice;
                 if(choice>0)
                     menu_display();

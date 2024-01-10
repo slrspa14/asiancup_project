@@ -1,7 +1,6 @@
-#include "choice.h"
-// #include <vector>
+#include "display.h"
 
-void join_data::file_save()
+void display::file_save()
 {
     string line;
     ofstream file("join.csv",ios::app);
@@ -10,11 +9,10 @@ void join_data::file_save()
     else
     {
         cout << "회원가입" << endl;
-        cout << "성명: ___\b\b\b";
+        cout << "성명: ______\b\b\b\b\b\b";
         string user_name;
         cin >> user_name;
-        //name_v.push_back(user_name);
-        //cout << name_v[0] << endl; // 확인용
+        
         while(1)
         {
             if(while_vector1(user_name) == 1)
@@ -91,7 +89,8 @@ void join_data::file_save()
     }
     system("clear");
 }
-int join_data::while_vector1(string name)
+// int join_data::while_vector1(string name)
+int display::while_vector1(string name)
 {
     if(name_v.size() != 0)
     {
@@ -103,7 +102,8 @@ int join_data::while_vector1(string name)
     }
     return 0;
 }
-int join_data::while_vector2(string id)
+// int join_data::while_vector2(string id)
+int display::while_vector2(string id)
 {
     if (id_v.size() !=0)
     {
@@ -115,7 +115,8 @@ int join_data::while_vector2(string id)
     }
     return 0;
 }
-int join_data::while_vector3(string pw)
+// int join_data::while_vector3(string pw)
+int display::while_vector3(string pw)
 {
     if (pw_v.size() !=0)
     {
@@ -127,7 +128,8 @@ int join_data::while_vector3(string pw)
     }
     return 0;
 }
-int join_data::while_vector4(string pnum)
+// int join_data::while_vector4(string pnum)
+int display::while_vector4(string pnum)
 {
     if (pnum_v.size() !=0)
     {

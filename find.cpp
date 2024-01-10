@@ -23,13 +23,14 @@ void display::find()
         }
         else if(strcmp_name(user_name) == 1 && strcmp_pnum(user_pnum) == 1)
         {
-            vector<string>id_v;
-            vector<string> id=id_v;
-            std::cout << "입력하신 성함과 번호에 일치하는\n ID:";
-            std::cout << id_v << std::endl;
+            std::cout << "입력하신 성함과 번호에 일치하는\nID:";
+            for (int i = 0; i < id_v.size(); i++)
+                cout << id_v[i] << endl;
             std::cout << "PW:";
-            std::cout << pw_v << std::endl;
-            std::cout << "입니다.";
+            for (int j = 0; j < pw_v.size(); j++)
+                cout << pw_v[j] << endl;
+            std::cout << "입니다.\n";
+            break;
         }
     }
     // break;

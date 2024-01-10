@@ -25,6 +25,7 @@ class display
     void log_in();
     void file_save();
     void find();
+    void ticketing();
     int while_vector1(string name);
     int while_vector2(string id);
     int while_vector3(string pw);

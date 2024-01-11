@@ -3,7 +3,6 @@
 void display::file_save()
 {
     system("clear");
-    string line;
     ofstream file("join.csv",ios::app);
     if(!file.is_open())
         cout << "error" << endl;

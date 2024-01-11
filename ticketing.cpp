@@ -51,7 +51,25 @@ void display::day_choice()
             file.close();//경기장 닫기
         }
         system("clear");
-        std::cout << "4x4 좌석";
+        int y [4][4] = {0};
+        int add=0;
+        cout << "예약 가능 좌석: 총 16 석" << endl << endl;
+        cout << " 1 2 3 4 " << endl;
+
+        for (int j = 0; j < 4; j++){
+            cout << char('A' + j);
+
+            for (int i = 0; i < 4; i++) {
+                if (y[i][j] == 1)
+                    cout << "■ ";
+                else {
+                    cout << "□ ";
+                    add++;
+                }
+            }
+        cout << endl;
+        //system("clear");
+    }
         std::cout << "상세좌석을 선택해주세요." << std::endl;
         std::cout << "행을 먼저 선택해주세요: ";
         int seat_choice1 = 0;
@@ -141,7 +159,25 @@ void display::day_choice()
             file.close();//경기장 닫기
         }
         system("clear");
-        std::cout << "4x4 좌석";
+        int y [4][4] = {0};
+        int add=0;
+        cout << "예약 가능 좌석: 총 16 석" << endl << endl;
+        cout << " 1 2 3 4 " << endl;
+
+        for (int j = 0; j < 4; j++){
+            cout << char('A' + j);
+
+            for (int i = 0; i < 4; i++) {
+                if (y[i][j] == 1)
+                    cout << "■ ";
+                else {
+                    cout << "□ ";
+                    add++;
+                }
+            }
+        cout << endl;
+        //system("clear");
+    }
         std::cout << "상세좌석을 선택해주세요." << std::endl;
         std::cout << "행을 먼저 선택해주세요: ";
         int seat_choice1 = 0;
@@ -224,7 +260,25 @@ void display::day_choice()
             file.close();//경기장 닫기
         }
         system("clear");
-        std::cout << "4x4 좌석";
+        int y [4][4] = {0};
+        int add=0;
+        cout << "예약 가능 좌석: 총 16 석" << endl << endl;
+        cout << " 1 2 3 4 " << endl;
+
+        for (int j = 0; j < 4; j++){
+            cout << char('A' + j);
+
+            for (int i = 0; i < 4; i++) {
+                if (y[i][j] == 1)
+                    cout << "■ ";
+                else {
+                    cout << "□ ";
+                    add++;
+                }
+            }
+        cout << endl;
+        //system("clear");
+    }
         std::cout << "상세좌석을 선택해주세요." << std::endl;
         std::cout << "행을 먼저 선택해주세요: ";
         int seat_choice1 = 0;

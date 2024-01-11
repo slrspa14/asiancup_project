@@ -15,8 +15,5 @@ void display::start_asciiart()
         file.close(); // 열었으면 닫아야지
     }
     else
-    {
         std::cout << "error" << std::endl;
-    }
 }
-ddd

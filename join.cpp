@@ -14,77 +14,53 @@ void display::file_save()
         string user_name;
         cin >> user_name;
         
-        while(1)
+        while(while_vector1(user_name) == 1)
         {
-            if(while_vector1(user_name) == 1)
-            {
-                cout << "중복된 이름 다시입력" << endl << "___\b\b\b";
-                cin >> user_name;
-            }
-            else
-            {
-                file << user_name << ",";
-                name_v.push_back(user_name);
-                break;
-            }
+            cout << "중복된 이름 다시입력" << endl << "___\b\b\b";
+            cin >> user_name;
         }
+        file << user_name << ",";
+        name_v.push_back(user_name);
 
         cout << "ID:_____\b\b\b\b\b";
         string user_id;
         cin >> user_id;
 
-        while(1) // 중복검사용
+        while (while_vector2(user_id) == 1) // 중복검사
         {
-            if(while_vector2(user_id) == 1)
-            {
-                cout << "중복된 ID 다시입력" << endl << "ID:_____\b\b\b\b\b";
-                cin >> user_id;
-            }
-            else
-            {   
-                file << user_id << ",";
-                id_v.push_back(user_id);
-                break;
-            }
+            std::cout << "중복된 ID 다시입력" << std::endl << "ID:______\b\b\b\b\b\b";
+            std::cin >> user_id;
         }
+        file << user_id <<",";
+        id_v.push_back(user_id);
+
         cout << "PW는 5글자이하로 입력해주세요" << endl;
         cout << "PW:_____\b\b\b\b\b";
         string user_pw;
         cin >> user_pw;
+        
         while(user_pw.size() > 5)
             cout << "5글자이하로 입력해주세요.\n" << "PW:_____\b\b\b\b\b";
-        while(1)
+
+        while(while_vector3(user_pw) == 1)
         {
-            if(while_vector3(user_pw) == 1)
-            {
-                cout << "중복된 PW 다시입력" << endl << "PW:_____\b\b\b\b\b";
-                cin >> user_pw;
-            }
-            else
-            {   
-                file << user_pw << ",";
-                pw_v.push_back(user_pw);
-                break;
-            }
+            cout << "중복된 PW 다시입력" << endl << "PW:_____\b\b\b\b\b";
+            cin >> user_pw;
         }
-        
+        file << user_pw << ",";
+        pw_v.push_back(user_pw);
+    
         cout << "핸드폰번호(11자리, -제외) H.P:___________\b\b\b\b\b\b\b\b\b\b\b";
         string user_pnum;
         cin >> user_pnum;
-        while(1)
+        while(while_vector4(user_pnum) == 1)
         {
-            if(while_vector4(user_pnum) == 1)
-            {
-                cout << "중복된 핸드폰번호 다시입력" << endl << "H.P:___________\b\b\b\b\b\b\b\b\b\b\b";
-                cin >> user_pnum;
-            }
-            else
-            {   
-                file << user_pnum << ",";
-                pnum_v.push_back(user_pnum);
-                break;
-            }
+            cout << "중복된 핸드폰번호 다시입력" << endl << "H.P:___________\b\b\b\b\b\b\b\b\b\b\b";
+            cin >> user_pnum;
         }
+        file << user_pnum << ",";
+        pnum_v.push_back(user_pnum);
+        
         cout << "회원가입 완료" << endl;
         cout << "회원번호: " << rand()%10000 << endl; //회원번호 랜덤값
         file << '\n';

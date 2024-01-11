@@ -17,6 +17,14 @@ class display
     vector<string> id_v;
     vector<string> pw_v;
     vector<string> pnum_v;
+    vector<string> play_choice;
+    vector<string> grade_choice;
+    vector<string> seat_choice1;
+    vector<string> seat_choice2;
+    vector<string> headcount;
+    vector<int>seat_num1;
+    vector<int>seat_num2;
+    vector<int>headcount1;
     public:
     void start_asciiart();
     void korea_asciiart();
@@ -24,7 +32,10 @@ class display
     void menu_display();
     void log_in();
     void file_save();
-    void find();
+    void find_logindata();
+    void find_ticket();
+    void day_choice();
+    void information();
     void ticketing();
     int while_vector1(string name);
     int while_vector2(string id);

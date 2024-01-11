@@ -1,16 +1,9 @@
-#include <iostream>
-#include "asiancup_art.h"
-#include "menu.h"
-// #include "select.h"
+#include "display.h"
 
 int main()
-{   
-    art start;
-    console dis;
-    start.start_asciiart();
-    dis.display();
-    dis.login_display();
-    dis.forget_display();
-    dis.join_display();
+{
+    display output;
+    output.start_asciiart();
+    output.dis();
     return 0;
 }

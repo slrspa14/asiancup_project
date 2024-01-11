@@ -29,8 +29,10 @@ void display::log_in()
             else if (strcmp_id(log_id) == 1 && strcmp_pw(log_pw) == 1)
             {
                 std::cout << "로그인되었습니다." << std::endl;
+                sleep(1);
+                system("clear");
                 break;
-            }   
+            }
         }
         file.close();
         login_count++;

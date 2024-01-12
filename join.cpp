@@ -1,3 +1,4 @@
+// 벡터 중복검사
 #include "display.h"
 
 void display::file_save()
@@ -117,3 +118,76 @@ int display::while_vector4(string pnum)
     }
     return 0;
 }
+
+//파일 입출력 중복검사
+// #include "display.h"
+
+// void display::file_save()
+// {
+//     system("clear");
+//     std::string line;
+//     std::fstream ofile("join.csv",std::ios::app);
+//     if(!ofile.is_open())
+//         std::cout << "error" << std::endl;
+//     else
+//     {
+//         std::string user_name, user_id, user_pw, user_pnum;
+//         std::cout << "회원가입" << std::endl;
+//         std::cout  << "성명:______\b\b\b\b\b\b";//박하늘별님구름햇님보다사랑스러우리
+//         std::cin >> user_name;
+//         std::cout << "ID:_____\b\b\b\b\b";
+//         std::cin >> user_id;
+//         std::cout << "PW는 5글자이하로 입력해주세요" << std::endl;
+//         std::cout << "PW:_____\b\b\b\b\b";
+//         std::cin >> user_pw;
+//         while(user_pw.size() > 5) // 비번 제한
+//             std::cout << "5글자이하로 입력해주세요.\n" << "PW:_____\b\b\b\b\b";
+//         std::cout << "핸드폰번호(11자리, -제외) H.P:___________\b\b\b\b\b\b\b\b\b\b\b";
+//         std::cin >> user_pnum;
+
+//         while(getline(ofile,line))
+//         {
+//             std::stringstream ss(line);
+//             std::string name,id,pw,pnum;
+//             getline(ss,name,','); // 작은따옴표
+//             getline(ss,id,',');
+//             getline(ss,pw,',');
+//             getline(ss,pnum,',');
+//             while(name == user_name)
+//             {
+//                 std::cout << "중복된 이름입니다. 다시 입력해주세요.\n";
+//                 std::cout << "성명:______\b\b\b\b\b\b";
+//                 std::cin >> user_name;
+//             }
+//             while(id == user_id)
+//             {
+//                 std::cout << "중복된 ID입니다. 다시 입력해주세요.\n";
+//                 std::cout << "ID:_____\b\b\b\b\b";
+//                 std::cin >> user_id;
+//             }
+//             while(pw == user_pw)
+//             {
+//                 std::cout << "중복된 PW입니다. 다시 입력해주세요.\n";
+//                 std::cout << "PW:_____\b\b\b\b\b";
+//                 std::cin >> user_pw;
+//             }
+//             while(pnum == user_pnum)
+//             {
+//                 std::cout << "중복된 핸드폰번호입니다. 다시 입력해주세요.\n";
+//                 std::cout << "H.P:___________\b\b\b\b\b\b\b\b\b\b\b";
+//                 std::cin >> user_pnum;
+//             }
+            
+//             ofile << user_name << ",";
+//             ofile << user_id << ",";
+//             ofile << user_pw << ",";
+//             ofile << user_pnum << " " << std::endl;
+//             ofile.close(); // 닫기
+//             break;
+//         }
+//         std::cout << "회원가입 완료" << std::endl;
+//         std::cout << "회원번호: " << rand()%10000 << std::endl; //회원번호 랜덤값
+//         sleep(2);
+//     }
+//     system("clear");
+// }

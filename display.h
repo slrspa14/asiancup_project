@@ -34,7 +34,6 @@ class display
     void file_save();
     void find_logindata();
     void find_ticket();
-    void day_choice();
     void information();
     void ticketing();
     int while_vector1(string name);

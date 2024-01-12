@@ -55,7 +55,7 @@ void display::dis()
                 std::cout << "2. 예매확인" << std::endl;
                 std::cin >> choice;
                 if(choice == 1)
-                    day_choice();
+                    ticketing();
                 else
                 {
                     find_ticket();
